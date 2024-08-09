@@ -9,5 +9,11 @@ return [
         'cache' => [
             'class' => \yii\caching\FileCache::class,
         ],
+        // Додали authManager для RBAC
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+            // 'defaultRoles' => ['guest', 'user'],
+            'cache' => 'cache',
+        ],
     ],
 ];
